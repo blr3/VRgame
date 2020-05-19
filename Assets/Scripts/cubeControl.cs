@@ -53,7 +53,6 @@ public class cubeControl : MonoBehaviour
 		Renderer rend = other.gameObject.GetComponent<Renderer>();
 		if (other.gameObject.CompareTag("Droplet"))
 		{
-			Destroy(gameObject);
 			if (rend.sharedMaterial.name == GetComponent<Renderer>().sharedMaterial.name) {
 				// add points
 			} else {
