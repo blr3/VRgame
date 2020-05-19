@@ -16,6 +16,8 @@ public class score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = cube.GetComponent<cubeControl>().totalScore.ToString();
+		if (cube != null) {	
+			scoreText.text = cube.GetComponent<cubeControl>().totalScore.ToString();
+		}
     }
 }

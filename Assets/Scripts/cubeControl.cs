@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class cubeControl : MonoBehaviour
 {
@@ -13,12 +14,7 @@ public class cubeControl : MonoBehaviour
 		rend.enabled = true;
 		rend.sharedMaterial = materials[Random.Range(0,(materials.Length))]; 
 	}
-    void Start()
-    {
-
-       //WaitForSeconds(5);
-    }
-
+	
     // Update is called once per frame
     void Update()
     {
@@ -36,21 +32,9 @@ public class cubeControl : MonoBehaviour
 		}
         
     }
-    
-    /*
-    void OnCollisionEnter(Collision col) 
-    {
-		/*
-		foreach (ContactPoint contact in col.contacts)
-		{
-			Debug.DrawRay(contact.point, contact.normal, Color.white);
-		}
-	}
-	*/
 	
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("trigger detected");
 		Renderer rend = other.gameObject.GetComponent<Renderer>();
 		if (other.gameObject.CompareTag("Droplet"))
 		{
@@ -58,6 +42,7 @@ public class cubeControl : MonoBehaviour
 				totalScore += 1;
 			} else {
 				Destroy(gameObject);
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 			}
 		}
 	}
