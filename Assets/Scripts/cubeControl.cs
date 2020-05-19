@@ -5,6 +5,7 @@ using UnityEngine;
 public class cubeControl : MonoBehaviour
 {
 	public Material[] materials;
+	public int totalScore = 0;
     // Start is called before the first frame update
     void Awake() 
     {
@@ -54,7 +55,7 @@ public class cubeControl : MonoBehaviour
 		if (other.gameObject.CompareTag("Droplet"))
 		{
 			if (rend.sharedMaterial.name == GetComponent<Renderer>().sharedMaterial.name) {
-				// add points
+				totalScore += 1;
 			} else {
 				Destroy(gameObject);
 			}

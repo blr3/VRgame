@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\score.cs" />
      <Compile Include="Assets\Scripts\cubeControl.cs" />
      <Compile Include="Assets\Scripts\paintDroplets.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
