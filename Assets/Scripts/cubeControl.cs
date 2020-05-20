@@ -25,12 +25,18 @@ public class cubeControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		float xMax = plane.GetComponent<Renderer>().bounds.max.x;
-		float zMax = plane.GetComponent<Renderer>().bounds.max.z;
-		float xPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.x);
-		float zPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.z);
+		//float xMax = plane.GetComponent<Renderer>().bounds.max.x;
+		//float zMax = plane.GetComponent<Renderer>().bounds.max.z;
+		float yMax = plane.GetComponent<Renderer>().bounds.max.y;
 
-		if (xPos > xMax || zPos > zMax) {
+		//float xPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.x);
+		//float zPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.z);
+		float yPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.y);
+
+		Debug.Log("yMax is " + yMax);
+		Debug.Log("yPos is " + yPos);
+		//if (xPos > xMax || zPos > zMax) {
+		if (Mathf.Abs(yPos - yMax) > 100) {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
 		if (Input.GetKey("right")) {
