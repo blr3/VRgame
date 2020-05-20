@@ -23,17 +23,17 @@ public class paintDroplets : MonoBehaviour
 
         // Update is called once per frame
     void Update() {
-		if (cube.GetComponent<cubeControl>().totalScore >= levelThreeVal) {
-				Debug.Log("reached level 3");
-				seconds = 0.35f;
-				cube.GetComponent<cubeControl>().points = 5;
-				drag = 0;
-		} else if (cube != null) {
-			if (cube.GetComponent<cubeControl>().totalScore >= levelTwoVal) {
-				Debug.Log("reached level 2");
-				seconds = 0.5f;
-				cube.GetComponent<cubeControl>().points = 2;
-				drag = 0;
+		if (cube != null) {
+			if (cube.GetComponent<cubeControl>().totalScore >= levelThreeVal) {
+					Debug.Log("reached level 3");
+					seconds = 0.35f;
+					cube.GetComponent<cubeControl>().points = 5;
+					drag = 0;
+			} else if (cube.GetComponent<cubeControl>().totalScore >= levelTwoVal) {
+					Debug.Log("reached level 2");
+					seconds = 0.5f;
+					cube.GetComponent<cubeControl>().points = 2;
+					drag = 0;
 			}
 		}
 	}
