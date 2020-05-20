@@ -63,4 +63,10 @@ public class cubeControl : MonoBehaviour
 			}
 		}
 	}
+
+	// Use PlayerPrefs API to save player score for later display
+	void OnDisable()
+	{
+		PlayerPrefs.SetInt("score", totalScore);
+	}
 }

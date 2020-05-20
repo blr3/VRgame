@@ -25,12 +25,10 @@ public class paintDroplets : MonoBehaviour
 		if (cube != null) {
 			// Adjust points and speed of droplets depending on current level
 			if (cube.GetComponent<cubeControl>().totalScore >= levelThreeVal) {
-					Debug.Log("reached level 3");
 					seconds = 0.35f;
 					cube.GetComponent<cubeControl>().points = 5;
 					drag = 0;
 			} else if (cube.GetComponent<cubeControl>().totalScore >= levelTwoVal) {
-					Debug.Log("reached level 2");
 					seconds = 0.5f;
 					cube.GetComponent<cubeControl>().points = 2;
 					drag = 0;
