@@ -11,7 +11,7 @@ public class paintDroplets : MonoBehaviour
 	public int levelThreeVal;
 	public GameObject paintDroplet;
 	public int drag;
-    // Start is called before the first frame update
+
     void Start()
     {
 		drag = 1;
@@ -21,16 +21,14 @@ public class paintDroplets : MonoBehaviour
 		StartCoroutine("MakeDroplets");
     }
 
-        // Update is called once per frame
     void Update() {
 		if (cube != null) {
+			// Adjust points and speed of droplets depending on current level
 			if (cube.GetComponent<cubeControl>().totalScore >= levelThreeVal) {
-					Debug.Log("reached level 3");
 					seconds = 0.35f;
 					cube.GetComponent<cubeControl>().points = 5;
 					drag = 0;
 			} else if (cube.GetComponent<cubeControl>().totalScore >= levelTwoVal) {
-					Debug.Log("reached level 2");
 					seconds = 0.5f;
 					cube.GetComponent<cubeControl>().points = 2;
 					drag = 0;
@@ -38,6 +36,7 @@ public class paintDroplets : MonoBehaviour
 		}
 	}
 
+	// Coroutine for generating randomly positioned and colored droplets
     IEnumerator MakeDroplets()
     {
 		while (true) {

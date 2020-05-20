@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\cubeControl.cs" />
-     <Compile Include="Assets\Scripts\endScore.cs" />
      <Compile Include="Assets\Scripts\gameOver.cs" />
      <Compile Include="Assets\Scripts\instructionScreen.cs" />
      <Compile Include="Assets\Scripts\paintDroplets.cs" />
