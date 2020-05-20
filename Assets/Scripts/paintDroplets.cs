@@ -20,7 +20,7 @@ public class paintDroplets : MonoBehaviour
 		seconds = 1.5f;
 		StartCoroutine("MakeDroplets");
     }
-    
+
         // Update is called once per frame
     void Update() {
 		if (cube.GetComponent<cubeControl>().totalScore >= levelThreeVal) {
@@ -28,7 +28,7 @@ public class paintDroplets : MonoBehaviour
 				seconds = 0.35f;
 				cube.GetComponent<cubeControl>().points = 5;
 				drag = 0;
-		} else if (cube != null) {	
+		} else if (cube != null) {
 			if (cube.GetComponent<cubeControl>().totalScore >= levelTwoVal) {
 				Debug.Log("reached level 2");
 				seconds = 0.5f;
@@ -39,11 +39,11 @@ public class paintDroplets : MonoBehaviour
 	}
 
     IEnumerator MakeDroplets()
-    {	
+    {
 		while (true) {
-			GameObject item = Instantiate(paintDroplet, new Vector3(Random.Range(-4,4),10,Random.Range(-4,4)), Quaternion.identity);
+			GameObject item = Instantiate(paintDroplet, new Vector3(Random.Range(-4f,4f),10,Random.Range(-4f,4f)), Quaternion.identity);
 			Renderer rend = item.GetComponent<Renderer>();
-			rend.sharedMaterial = materials[Random.Range(0,(materials.Length))]; 
+			rend.sharedMaterial = materials[Random.Range(0,(materials.Length))];
 			item.GetComponent<Rigidbody>().drag = drag;
 			yield return new WaitForSeconds(seconds);
 		}

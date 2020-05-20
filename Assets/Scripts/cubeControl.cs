@@ -33,8 +33,6 @@ public class cubeControl : MonoBehaviour
 		//float zPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.z);
 		float yPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.y);
 
-		Debug.Log("yMax is " + yMax);
-		Debug.Log("yPos is " + yPos);
 		//if (xPos > xMax || zPos > zMax) {
 		if (Mathf.Abs(yPos - yMax) > 100) {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -61,6 +59,7 @@ public class cubeControl : MonoBehaviour
 		{
 			if (rend.sharedMaterial.name == GetComponent<Renderer>().sharedMaterial.name) {
 				totalScore += points;
+				Destroy(other.gameObject);
 
 				myAudioSource.PlayOneShot(ding);
 			} else {
