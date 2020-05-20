@@ -13,5 +13,6 @@ public class welcomeScreen : MonoBehaviour
 	public void instructions()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+		Debug.Log("should be going to instructions");
 	}
 }
