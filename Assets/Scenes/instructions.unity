@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 310726857}
   - component: {fileID: 310726856}
   m_Layer: 5
-  m_Name: Text
+  m_Name: splat_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 370978041}
   - component: {fileID: 370978040}
   m_Layer: 5
-  m_Name: Text (3)
+  m_Name: instructions_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,16 +405,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Move your cube around with arrow keys, but be careful not to fall off the
-    stage!
+  m_Text: 'Move your cube around with the arrow keys, but be careful not to fall off
+    the stage!
 
 
-    Catch drops matching your color to earn points, but watch out! If you catch a
-    drop of the wrong color, it''s game over.
+    Catch droplets matching your color to earn points, but watch out! If you catch
+    a droplet of the wrong color, it''s game over.
 
 
-    As you earn more points and level up, the drops come faster and more often! How
-    high can you score?'
+    Climb levels as you earn points, but how high can you score as the droplets come
+    down faster and faster?'
 --- !u!222 &370978041
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 436230374}
   - component: {fileID: 436230378}
   m_Layer: 5
-  m_Name: Button
+  m_Name: start_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,7 +833,7 @@ GameObject:
   - component: {fileID: 1996819522}
   - component: {fileID: 1996819521}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: how_to_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -5,15 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class gameOver : MonoBehaviour
 {
-	public void startAgain() 
+	public void startAgain()
 	{
-		Debug.Log("start again clicked");
+		// Jump to main game scene
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
 	}
-	
+
 	public void quit()
 	{
-		Debug.Log("quit clicked");
 		Application.Quit();
 	}
 }

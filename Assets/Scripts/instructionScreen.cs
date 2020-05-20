@@ -7,6 +7,7 @@ public class instructionScreen : MonoBehaviour
 {
 	public void start()
 	{
+        // Jump to main game scene
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
 	}
 }

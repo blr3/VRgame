@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1815919036519235565}
   - component: {fileID: 8247770639853369934}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: paint_splatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.8, y: 6.52}
+  m_Size: {x: 5.64, y: 6.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
