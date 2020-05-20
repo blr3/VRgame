@@ -17,7 +17,6 @@ public class score : MonoBehaviour
 		// Import level point thresholds from paintDroplets script
         levelTwoVal = camera.GetComponent<paintDroplets>().levelTwoVal;
 		levelThreeVal = camera.GetComponent<paintDroplets>().levelThreeVal;
-		PlayerPrefs.SetInt("TotalPoints", int.Parse(scoreText.text));
     }
 
     void Update()
@@ -45,10 +44,5 @@ public class score : MonoBehaviour
 			levelText.text = level.ToString();
 			levelPointsText.text = levelPoints.ToString();
 		}
-    }
-    
-    void OnDestroy()
-    {
-        PlayerPrefs.SetInt("TotalPoints", int.Parse(scoreText.text));
     }
 }
