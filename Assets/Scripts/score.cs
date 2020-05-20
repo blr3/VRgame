@@ -17,6 +17,7 @@ public class score : MonoBehaviour
     {
         levelTwoVal = camera.GetComponent<paintDroplets>().levelTwoVal;
 		levelThreeVal = camera.GetComponent<paintDroplets>().levelThreeVal;
+		PlayerPrefs.SetInt("TotalPoints", int.Parse(scoreText.text));
     }
 
     // Update is called once per frame
@@ -42,5 +43,10 @@ public class score : MonoBehaviour
 			levelText.text = level.ToString();
 			levelPointsText.text = levelPoints.ToString();
 		}
+    }
+    
+    void OnDestroy()
+    {
+        PlayerPrefs.SetInt("TotalPoints", int.Parse(scoreText.text));
     }
 }
