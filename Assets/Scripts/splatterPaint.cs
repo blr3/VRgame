@@ -29,6 +29,8 @@ public class splatterPaint : MonoBehaviour
             // Match splatter colors to droplet colors
             Color dropColor = other.gameObject.GetComponent<Renderer>().material.color;
             item.GetComponent<Renderer>().material.SetColor("_Color", dropColor);
+
+            Destroy(other.gameObject);
         }
 
     }
