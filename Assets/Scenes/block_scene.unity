@@ -299,16 +299,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c307ddd903942ab87432302b6b7ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.1
-  spawnTime: 1.5
-  paintDroplet: {fileID: 4543088993780671842, guid: b09c9deb1ce6d485c9b7ac7900eb23eb,
-    type: 3}
-  stopSpawning: 0
+  seconds: 0
   materials:
   - {fileID: 2100000, guid: 2357b9ba201a1488ab72cbd1abba54f0, type: 2}
   - {fileID: 2100000, guid: e1c3a5c757bb44664b841c4ed128d91e, type: 2}
   - {fileID: 2100000, guid: f3412653c916f4ef2be1d1b4073fe7bd, type: 2}
   - {fileID: 2100000, guid: fbd43ed01a6404b0c90eabadd08ad359, type: 2}
+  cube: {fileID: 1841800644}
+  levelTwoVal: 0
+  levelThreeVal: 0
+  paintDroplet: {fileID: 4543088993780671842, guid: b09c9deb1ce6d485c9b7ac7900eb23eb,
+    type: 3}
+  drag: 0
 --- !u!1 &438806068
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,18 +712,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 665533868}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1841800639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841800638}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 386e64478df2f4388a147bb3b81e3497, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &1841800640
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -757,18 +747,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.000001, z: 2}
   m_Center: {x: 0, y: -0.00000047683716, z: 0}
---- !u!114 &1841800646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1841800638}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 386e64478df2f4388a147bb3b81e3497, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1841800647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,3 +765,5 @@ MonoBehaviour:
   - {fileID: 2100000, guid: f3412653c916f4ef2be1d1b4073fe7bd, type: 2}
   - {fileID: 2100000, guid: fbd43ed01a6404b0c90eabadd08ad359, type: 2}
   totalScore: 0
+  points: 1
+  plane: {fileID: 178895226}

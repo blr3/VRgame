@@ -7,6 +7,8 @@ public class cubeControl : MonoBehaviour
 {
 	public Material[] materials;
 	public int totalScore = 0;
+	public int points = 1;
+	public GameObject plane;
     // Start is called before the first frame update
     void Awake() 
     {
@@ -17,7 +19,15 @@ public class cubeControl : MonoBehaviour
 	
     // Update is called once per frame
     void Update()
-    {
+    {			
+		float xMax = plane.GetComponent<Renderer>().bounds.max.x;
+		float zMax = plane.GetComponent<Renderer>().bounds.max.z;
+		float xPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.x);
+		float zPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.z); 
+	
+		if (xPos > xMax || zPos > zMax) {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		}
 		if (Input.GetKey("right")) {
 			transform.Translate(0.1f,0,0);
 		}
@@ -39,7 +49,7 @@ public class cubeControl : MonoBehaviour
 		if (other.gameObject.CompareTag("Droplet"))
 		{
 			if (rend.sharedMaterial.name == GetComponent<Renderer>().sharedMaterial.name) {
-				totalScore += 1;
+				totalScore += points;
 			} else {
 				Destroy(gameObject);
 				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
