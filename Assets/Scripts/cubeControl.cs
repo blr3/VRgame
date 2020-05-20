@@ -5,26 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class cubeControl : MonoBehaviour
 {
+	public AudioClip ding;
+	AudioSource myAudioSource;
+
 	public Material[] materials;
 	public int totalScore = 0;
 	public int points = 1;
 	public GameObject plane;
     // Start is called before the first frame update
-    void Awake() 
+    void Awake()
     {
+		myAudioSource = GetComponent<AudioSource>();
+
 		Renderer rend = GetComponent<Renderer>();
 		rend.enabled = true;
-		rend.sharedMaterial = materials[Random.Range(0,(materials.Length))]; 
+		rend.sharedMaterial = materials[Random.Range(0,(materials.Length))];
 	}
-	
+
     // Update is called once per frame
     void Update()
-    {			
+    {
 		float xMax = plane.GetComponent<Renderer>().bounds.max.x;
 		float zMax = plane.GetComponent<Renderer>().bounds.max.z;
 		float xPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.x);
-		float zPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.z); 
-	
+		float zPos = Mathf.Abs(gameObject.GetComponent<Transform>().position.z);
+
 		if (xPos > xMax || zPos > zMax) {
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 		}
@@ -40,9 +45,9 @@ public class cubeControl : MonoBehaviour
 		if (Input.GetKey("down")) {
 			transform.Translate(0,0,-0.1f);
 		}
-        
+
     }
-	
+
 	void OnTriggerEnter(Collider other)
 	{
 		Renderer rend = other.gameObject.GetComponent<Renderer>();
@@ -50,9 +55,12 @@ public class cubeControl : MonoBehaviour
 		{
 			if (rend.sharedMaterial.name == GetComponent<Renderer>().sharedMaterial.name) {
 				totalScore += points;
+
+				myAudioSource.PlayOneShot(ding);
 			} else {
 				Destroy(gameObject);
 				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
 			}
 		}
 	}
