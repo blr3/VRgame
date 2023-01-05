@@ -23,3 +23,9 @@ The correct capture of each droplet adds five points to the total score. The use
 2. Tutorial
 3. Game 
 4. Game over screen 
+
+### Demo
+
+https://user-images.githubusercontent.com/32915007/210725345-96c7a8d6-164c-47c6-bd8b-04795153be39.mp4
+
+
